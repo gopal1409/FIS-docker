@@ -7,4 +7,19 @@
   102  cd target/
   103  ls
   104  cd ..
+  
+  ###how to build the image
+    107  touch dockerfile
+  108  nano dockerfile
+  ###3copy the bewlo mentioned content inside dockerfile
+FROM openjdk:20-slim-buster
+ARG JAR_FILE=target/*.jar
+COPY ${JAR_FILE} application.jar
+EXPOSE 8080
+ENTRYPOINT ["java","-jar","/application.jar"]
+####to save the file press ctrl x then press y and enter
+###run the below command which will build your custom image
+  109  docker build -t chatapp .
+  110  docker images
+
 
