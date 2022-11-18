@@ -17,4 +17,9 @@ docker --version
    ###docker command
     20  docker
    21  docker logs
+###deploy our first container workload
+ 24  docker container
+   25  docker container run --publish 80:80 --detach nginx
+   26  docker ps
+   27  docker container run --publish 81:80 --detach nginx
 
