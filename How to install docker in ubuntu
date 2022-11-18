@@ -43,5 +43,11 @@ docker --version
    58  kill -9 4822
    59  docker ps
    60  docker ps -a
-
+### 
+71  docker run -d -p 3306:3306 --name db -e MYSQL_RANDOM_ROOT_PASSWORD=true mysql
+   72  docker ps
+   73  docker logs db
+   74  docker exec -it db bash
+   mysql -u root -p
+   
 
