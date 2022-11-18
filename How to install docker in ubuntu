@@ -50,4 +50,15 @@ docker --version
    74  docker exec -it db bash
    mysql -u root -p
    
+#####container network communicateion
+ 78  docker network ls
+   79  docker network create my_app_net
+   80  docker network ls
+   81  docker container run -d --name new_nginx --network my_app_net nginx:alpine
+   82  docker container run -d --name con_nginx --network my_app_net nginx:alpine
+   83  docker ps
+   84  docker network inspect  my_app_net
+   85  docker ps
+   86  docker container exec -it con_nginx ping new_nginx
+   87  docker container exec -it new_nginx ping con_nginx
 
