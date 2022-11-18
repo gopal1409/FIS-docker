@@ -13,3 +13,8 @@ docker --version
 ###how to user 
 17  adduser tom
    18  usermod -aG docker tom
+   
+   ###docker command
+    20  docker
+   21  docker logs
+
