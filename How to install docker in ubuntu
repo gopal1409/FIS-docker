@@ -31,4 +31,17 @@ docker --version
    35  docker network ls
    36  docker ps
    37  docker container inspect 90d9ebabc2b7
+   
+   ####container run as process
+    51  docker ps
+   52  history
+   53  docker container run --publish 82:80 --detach httpd
+   54  docker ps
+   55  docker top 08a53a921352
+   56  ps aux
+   57  docker top 08a53a921352
+   58  kill -9 4822
+   59  docker ps
+   60  docker ps -a
+
 
