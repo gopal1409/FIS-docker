@@ -2,7 +2,6 @@
    96  apt install maven
    97  git clone https://github.com/gopal1409/springboot-chat-app.git
    98  cd springboot-chat-app/
-   99  maven clean package
   100  mvn clean package
   101  ls
   102  cd target/
