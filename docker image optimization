@@ -1,5 +1,7 @@
  mkdir test2
- 
+ 97  git clone https://github.com/gopal1409/springboot-chat-app.git
+   98  cd springboot-chat-app/
+   mvn clean package
  130  cd target/
   131  ls
   132  java -Djarmode=layertools -jar websocket-demo-0.0.1-SNAPSHOT.jar
