@@ -6,3 +6,30 @@
   221  kubectl apply -f pod.yml
   222  kubectl get pod
   223  kubectl describe pod myapp
+  
+  #####pod interaction command
+   221  kubectl apply -f pod.yml
+  222  kubectl get pod
+  223  kubectl describe pod myapp
+  224  history
+  225  kubectl get pod
+  226  git pull
+  227  kubectl apply -f pod.yml
+  228  kubectl get pod
+  229  kubectl edit pod myapp
+  230  kubectl get pod
+  231  kubectl describe pod myapp
+  232  clear
+  233  ls
+  234  kubectl get pod
+  235  kubectl get po
+  236  kubectl get pods
+  237  kubectl get p
+  238  kubectl describe pod
+  239  kubectl get pod -o wide
+  240  kubectl get pod
+  241  kubectl exec -it myapp bash
+  242  kubectl get pod
+  243  kubectl logs myapp
+  244  kubectl logs -f myapp
+
