@@ -46,3 +46,7 @@
   256  kubectl top pods --sort-by cpu
   257  kubectl top pods --sort-by memory
   258  kubectl top pods --all-namespaces --sort-by memory
+  
+  ###dry run
+    270  kubectl run nginx-webapp --image=nginx:1.20 --port=80 --dry-run=client -o yaml
+  271  kubectl run nginx-webapp --image=nginx:1.20 --port=80 --dry-run=client -o yaml
