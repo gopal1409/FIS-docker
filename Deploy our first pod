@@ -59,4 +59,7 @@
   281  kubectl apply -f pod.yml
   282  kubectl get pod
   283  kubectl describe pod myapp
+  ###how to login to specific container
+  287  kubectl exec -it myapp -c busy-box sh
+
 
