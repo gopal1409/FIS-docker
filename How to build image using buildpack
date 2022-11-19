@@ -1,0 +1,6 @@
+mkdir test
+123  git clone https://github.com/gopal1409/springboot-chat-app.git
+  124  cd springboot-chat-app/
+  125  ls
+  126  mvn spring-boot:build-image
+  127  docker images
