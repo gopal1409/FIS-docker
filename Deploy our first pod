@@ -50,3 +50,13 @@
   ###dry run
     270  kubectl run nginx-webapp --image=nginx:1.20 --port=80 --dry-run=client -o yaml
   271  kubectl run nginx-webapp --image=nginx:1.20 --port=80 --dry-run=client -o yaml
+  
+  
+ ####multi container pod
+ 276  cd fis-k8s-manifest/
+  277  git pull
+    280  kubectl delete pod myapp
+  281  kubectl apply -f pod.yml
+  282  kubectl get pod
+  283  kubectl describe pod myapp
+
