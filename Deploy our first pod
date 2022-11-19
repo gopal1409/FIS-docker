@@ -1,0 +1,8 @@
+216  cd /root
+  217  git clone https://github.com/gopal1409/fis-k8s-manifest.git
+  218  ls
+  219  cd fis-k8s-manifest/
+  220  ls
+  221  kubectl apply -f pod.yml
+  222  kubectl get pod
+  223  kubectl describe pod myapp
