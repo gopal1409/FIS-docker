@@ -1,0 +1,14 @@
+ mkdir test2
+ 
+ 130  cd target/
+  131  ls
+  132  java -Djarmode=layertools -jar websocket-demo-0.0.1-SNAPSHOT.jar
+  133  java -Djarmode=layertools -jar websocket-demo-0.0.1-SNAPSHOT.jar list
+  134  cd ..
+  135  nano dockerfile
+  136  docker build -t chatapp:v2 .
+  137  nano dockerfile
+  138  y
+  139  nano dockerfile
+  140  docker build -t chatapp:v2 .
+  141  docker images
