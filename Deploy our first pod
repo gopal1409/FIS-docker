@@ -32,4 +32,17 @@
   242  kubectl get pod
   243  kubectl logs myapp
   244  kubectl logs -f myapp
-
+#####pod defination
+ 247  kubectl run pod testpod --image=nginx
+  248  kubectl get pod
+  249  kubectl get pod myapp -o wide
+  250  kubectl get pod myapp -o yaml
+  251  kubectl get pod myapp -o json
+  252  kubectl edit pod myapp
+  ###to save it press the esc key :q enter
+  253  kubectl get pod
+  254  kubectl delete pod pod
+  255  kubectl top pods
+  256  kubectl top pods --sort-by cpu
+  257  kubectl top pods --sort-by memory
+  258  kubectl top pods --all-namespaces --sort-by memory
