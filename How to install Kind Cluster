@@ -1,0 +1,15 @@
+195  curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.17.0/kind-linux-amd64
+  196  chmod +x ./kind
+  197  sudo mv ./kind /usr/local/bin/kind
+  198  kind create cluster
+  200  sudo apt-get update
+  201  sudo apt-get install -y ca-certificates curl
+  202  sudo apt-get install -y apt-transport-https
+  203  sudo curl -fsSLo /usr/share/keyrings/kubernetes-archive-keyring.gpg https://packages.cloud.google.com/apt/doc/apt-key.gpg
+  204  echo "deb [signed-by=/usr/share/keyrings/kubernetes-archive-keyring.gpg] https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list
+  205  sudo apt-get update
+  206  sudo apt-get install -y kubectl
+ kubectl cluster-info --context kind-kind
+
+  207  kubectl get nodes
+  208  kubectl get pod --all-namespaces
