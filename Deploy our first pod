@@ -62,4 +62,12 @@
   ###how to login to specific container
   287  kubectl exec -it myapp -c busy-box sh
 
+###sidse cart pod
+  293  git pull
+  294  kubectl apply -f pod.yml
+  295  kubectl get pod
+301  kubectl exec -it sidecar-app -c log-exporter-sidecar bash
+cd /usr/share/nginx/html
+ls
+exit
 
