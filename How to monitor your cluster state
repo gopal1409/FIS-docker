@@ -1,0 +1,25 @@
+  ##3install the matric server
+  98  kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
+   99  kubectl get pod
+  100  kubectl get pod --all-namespaces
+  
+  
+  ####to get the status of worker node
+  kubectl get nodes
+  
+  ###3to get the performance data of worker nodes
+  kubectl top nodes
+  
+  ##3to get the kubecrnets component status
+  
+   112  kubectl describe pod metrics-server-8ff8f88c6-hz5xk --namespace=kube-system
+  113  kubectl top nodes
+  114  history
+  115  kubectl top nodes
+  116  kubectl get componentstatus
+  117  kubectl top pods --all-namespace --sort-by cpu > cpu_utilziation.txt
+  118  kubectl top pods --all-namespaces --sort-by cpu > cpu_utilziation.txt
+  119  kubectl top pods --all-namespaces --sort-by memory > memory_utilziation.txt
+  120  kubectl get pod --all-namespaces
+  121  kubectl top calico-node-cbzq7 -n calico-system --containers
+
