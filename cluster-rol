@@ -1,0 +1,16 @@
+ 303  kubectl create clusterrole deploy-deleter --verb delete --resource deployment
+304  kubectl get clusterrole deploy-deleter
+ 306  kubectl create clusterrolebinding deploy-deleter --user jane --clusterrole deploy-deleter
+308  kubectl -n red create rolebinding deploy-deleter --user jim --clusterrole deploy-deleter
+
+
+Test jane and jim
+ 309  kubectl auth can-i delete deploy --as jane
+  310  kubectl auth can-i delete deploy --as jane -n red
+  311  kubectl auth can-i delete deploy --as jane -n blue
+  312  kubectl auth can-i delete deploy --as jane -A
+  313  kubectl auth can-i delete deploy --as jim
+  314  kubectl auth can-i delete deploy --as jim -A
+  315  kubectl auth can-i delete deploy --as jim -n red
+  316  kubectl auth can-i delete deploy --as jim -n blue
+
