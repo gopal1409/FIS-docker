@@ -13,4 +13,8 @@
   345  kubectl apply -f network-policy.yml
   346  kubectl get networkpolicy
   347  kubectl exec backend -- curl frontend
+  ####delete the default deny policy
+   350  kubectl get networkpolicy
+  351  kubectl delete networkpolicy default-deny
+
 
