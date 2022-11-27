@@ -1,0 +1,23 @@
+###deploy the blue environment
+489  git pull
+  490  cd blue-greeen/
+  491  kubectl apply -f blue.yml
+  492  kubectl get svc
+  493  kubectl get pod
+  494  kubectl get svc
+###using the node machine ip and port number verify it it will show your the first version
+###deploy the green environment
+ 496  git pull
+  497  kubectl apply -f green.yml
+500  kubectl get pod
+  501  kubectl get svc
+  502  clear
+  503  kubectl get svc
+  504  kubectl describe svc my-app
+  505  kubectl get pod -o wide
+###patch from version one version to another version
+ 507  kubectl patch service my-app -p '{"spec":{"selector":{"version":"v1.0.0"}}}'
+  508  kubectl describe svc my-app
+  509  kubectl patch service my-app -p '{"spec":{"selector":{"version":"v2.0.0"}}}'
+  510  kubectl describe svc my-app
+
