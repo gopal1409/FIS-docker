@@ -1,0 +1,9 @@
+ 513  git pull
+  514  cd canary/
+  515  kubectl apply -f blue.yml
+  516  kubectl apply -f green.yml
+  517  kubectl get svc
+#####
+ 521  kubectl apply -f blue.yml -f ingress-v1.yml
+  522  kubectl apply -f ingress-canary.yml
+###after deploying 10 percent traffic will go to v2 of your app
