@@ -1,0 +1,28 @@
+ ###deploy ingress controler
+ 440  kubectl apply -f https://raw.githubusercontent.com/killer-sh/cks-course-environment/master/course-content/cluster-setup/secure-ingress/nginx-ingress-controller.yaml
+  441  kubectl get ns
+  442  kubectl -n ingress-nginx get pod,svc
+  443  kubectl get svc
+  444  kubectl get pod
+  
+  ###to verify the ingress you can copy the second machine ip and paster it in the browser 
+ ####
+ ####we will create an yaml file for ingress
+ ##3updat the ingress
+  455  kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.5.1/deploy/static/provider/baremetal/deploy.yaml
+  ###we will create two pod and two service
+   450  kubectl run pod1 --image=nginx
+  451  kubectl run pod2 --image=httpd
+  452  kubectl expose pod pod1 --port 80 --name service1
+  453  kubectl expose pod pod2 --port 80 --name service2
+#################delete the validation control
+  461  kubectl delete -A ValidatingWebhookConfiguration ingress-nginx-admission
+###apply the ingress manifest
+git pull
+kubectl apply -f ingress.yml
+### 465  kubectl get ingress
+  466  kubectl describe ingress secure-ingress
+  467  kubectl get pod -o wide
+
+
+ 
