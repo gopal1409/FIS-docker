@@ -16,5 +16,17 @@
   ####delete the default deny policy
    350  kubectl get networkpolicy
   351  kubectl delete networkpolicy default-deny
-
+####egress and ingress routing policy 
+  362  git pull
+  363  kubectl apply -f networkpolicyegress.yml
+  366  kubectl get networkpolicy
+ 368  kubectl exec frontend -- curl backend
+  369  kubectl exec backend -- curl frontend
+   370  git pull
+  371  kubectl apply -f networkpolicyingress.yml
+ 376  kubectl get pod --show-labels -o wide
+  377  kubectl exec frontend -- curl 192.168.145.211
+ 387  kubectl get networkpolicy
+  388  kubectl delete networkpolicy backend
+  389  kubectl delete networkpolicy frontend
 
