@@ -6,3 +6,11 @@
   340  kubectl get svc
   341  kubectl exec frontend -- curl backend
   342  kubectl exec backend -- curl frontend
+  
+  ###kubernetes create default deny
+  
+   344  git pull
+  345  kubectl apply -f network-policy.yml
+  346  kubectl get networkpolicy
+  347  kubectl exec backend -- curl frontend
+
